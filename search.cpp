@@ -14,7 +14,6 @@ using namespace std;
 */
 int linearSearch(auto data, auto key);//prototype
 
-
 int main()
 {
   vector<string> inputs;
@@ -46,6 +45,7 @@ int main()
 
 
    cin>>search_key;
+
  
     while(search_key != "#")//perform searches until sentinel entered
     {
@@ -67,3 +67,15 @@ int main()
 
     return 0;
 }
+
+int linearSearch(auto data, auto key)
+   {
+     for(int i=0; i<data.size(); i++)
+     {
+       if(data[i] == key)
+       {
+         return i;
+       }
+     }
+     return -1;
+   }
